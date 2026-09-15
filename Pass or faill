@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+/*program to determine passed or failed . To pass a student requires a total of 40% and
+at least 33%in each subject(out of 100) . Assuming that there are three subjects and
+taking marks from user */
+
+int main(){
+    int marks1;
+    printf("Enter Your Subject 1 Marks: ");
+    scanf("%d", &marks1);
+
+    int marks2;
+    printf("Enter Your Subject 2 Marks: ");
+    scanf("%d", &marks2);
+
+    int marks3;
+    printf("Enter Your Subject 3 Marks: ");
+    scanf("%d", &marks3);
+
+    int total= marks1+marks2+marks3;
+    int total1= (total*100)/300;
+
+    int sub1= marks1;
+    int sub2= marks2;
+    int sub3= marks3;
+
+    if(total1>=40 && sub1>=33){
+         if(total>=40 && sub2>=33){
+            if(total>=40 && sub3>=33){
+                printf("You Are Passed");
+            }
+
+        }
+    }
+    
+    else
+    printf("You Are Failed");
+    return 0;
+    }
